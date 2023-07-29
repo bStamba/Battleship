@@ -21,8 +21,6 @@ public class BattleshipMain {
 		
 		//Exit out of the game.
 		System.out.println("Thanks for playing!");
-		System.exit(0);
-		
-		
+		System.exit(0);		
 	}
 }

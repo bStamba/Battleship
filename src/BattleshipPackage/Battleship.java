@@ -1,12 +1,13 @@
 package BattleshipPackage;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Battleship {
 
 	private final int rowSize = 7;
 	private int[] locationCells = new int[rowSize];
-	private int hitCounter = 0;	
+	private int hitCounter = 0;
 	
 	//Method to start our game, creates a scanner to get user input and checks our user guess vs. battleship location.
 	public void startGame() {
@@ -27,7 +28,7 @@ public class Battleship {
 	//Set location of our battleship using the random number starting location.
 	//If the number is too high to fit into our elements by incrementing, decrement from the starting location instead.
 	public void setLocationCells(int location) {
-		if(location >= locationCells.length - 1) {
+		if(location >= locationCells.length - 2) {
 			for(int k = 0; k <= 2; k++) {
 				locationCells[location] = 1;
 				location = location - 1;
